@@ -37,6 +37,12 @@ namespace AboutMeQuiz
             Console.WriteLine("Am I over 30?");
             correctAnswersTotal += QuizFour(Console.ReadLine().ToLower());
 
+            Console.WriteLine("Can I play the piano?");
+            correctAnswersTotal += QuizFive(Console.ReadLine().ToLower());
+
+            Console.WriteLine("Do I speak any foreign languages?");
+            correctAnswersTotal += QuizSix(Console.ReadLine().ToLower());
+
             Console.WriteLine($"You got {correctAnswersTotal} question(s) correct!");
             Console.Read();
         }
@@ -133,6 +139,50 @@ namespace AboutMeQuiz
             else if (response == "n" || response == "no")
             {
                 Console.WriteLine("Thanks, but I am actually 31!");
+            }
+            else
+            {
+                Console.WriteLine("I didn't understand your response, please try again.");
+                QuizOne(Console.ReadLine().ToLower());
+            }
+
+            return accumulator;
+        }
+
+        static int QuizFive(string response)
+        {
+            int accumulator = 0;
+
+            if (response == "y" || response == "yes")
+            {
+                Console.WriteLine("Alas, I cannot.");
+            }
+            else if (response == "n" || response == "no")
+            {
+                Console.WriteLine("You have guessed correctly! I tried to learn in my teens, but never really dedicated myself to it.");
+                accumulator++;
+            }
+            else
+            {
+                Console.WriteLine("I didn't understand your response, please try again.");
+                QuizOne(Console.ReadLine().ToLower());
+            }
+
+            return accumulator;
+        }
+
+        static int QuizSix(string response)
+        {
+            int accumulator = 0;
+
+            if (response == "y" || response == "yes")
+            {
+                Console.WriteLine("Yes, I can! I learned Korean in the Navy and Japanese on my own.");
+                accumulator++;
+            }
+            else if (response == "n" || response == "no")
+            {
+                Console.WriteLine("I totally do! Korean and Japanese.");
             }
             else
             {
