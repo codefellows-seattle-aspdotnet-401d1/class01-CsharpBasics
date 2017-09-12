@@ -67,6 +67,7 @@ Better Luck next time");
                     Thread.Sleep(1000);
                     Console.Clear();
                 }
+                
             }
         }
 
