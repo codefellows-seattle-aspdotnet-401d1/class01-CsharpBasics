@@ -4,17 +4,16 @@ namespace lab01_tom
 {
     class Program
     {
-        int[] questions = new int[4];
+        //int[] questions = new int[0];
 
-
-    static void Main(string[] args)
+        static void Main()
         {
-
             NameQuestion();
             Question1();
             Question2();
             Question3();
             Question4();
+            Total();
             Console.Read();
         }
 
@@ -41,6 +40,7 @@ namespace lab01_tom
             if (game == "yes" || game == "Yes")
             {
                 Console.WriteLine("Yes it is. D.Va is the best!");
+                
             }
             else
             {
@@ -98,9 +98,10 @@ namespace lab01_tom
             }
         }
 
-        //static int Total()
-        //{
-
-        //}
+        static void Total()
+        {
+            //int numberCorrect = questions.Length;
+            //Console.WriteLine($"Thanks for playing! You got {numberCorrect} questions correct.");
+        }
     }
-}
+}   
