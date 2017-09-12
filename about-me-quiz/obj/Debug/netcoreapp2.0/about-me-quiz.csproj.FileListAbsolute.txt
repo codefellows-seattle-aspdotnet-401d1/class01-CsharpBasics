@@ -1,0 +1,11 @@
+C:\Users\acohr\source\repos\lab01-austin\class01-CsharpBasics\about-me-quiz\bin\Debug\netcoreapp2.0\about-me-quiz.deps.json
+C:\Users\acohr\source\repos\lab01-austin\class01-CsharpBasics\about-me-quiz\bin\Debug\netcoreapp2.0\about-me-quiz.runtimeconfig.json
+C:\Users\acohr\source\repos\lab01-austin\class01-CsharpBasics\about-me-quiz\bin\Debug\netcoreapp2.0\about-me-quiz.runtimeconfig.dev.json
+C:\Users\acohr\source\repos\lab01-austin\class01-CsharpBasics\about-me-quiz\bin\Debug\netcoreapp2.0\about-me-quiz.dll
+C:\Users\acohr\source\repos\lab01-austin\class01-CsharpBasics\about-me-quiz\bin\Debug\netcoreapp2.0\about-me-quiz.pdb
+C:\Users\acohr\source\repos\lab01-austin\class01-CsharpBasics\about-me-quiz\obj\Debug\netcoreapp2.0\about-me-quiz.csprojResolveAssemblyReference.cache
+C:\Users\acohr\source\repos\lab01-austin\class01-CsharpBasics\about-me-quiz\obj\Debug\netcoreapp2.0\about-me-quiz.csproj.CoreCompileInputs.cache
+C:\Users\acohr\source\repos\lab01-austin\class01-CsharpBasics\about-me-quiz\obj\Debug\netcoreapp2.0\about-me-quiz.AssemblyInfoInputs.cache
+C:\Users\acohr\source\repos\lab01-austin\class01-CsharpBasics\about-me-quiz\obj\Debug\netcoreapp2.0\about-me-quiz.AssemblyInfo.cs
+C:\Users\acohr\source\repos\lab01-austin\class01-CsharpBasics\about-me-quiz\obj\Debug\netcoreapp2.0\about-me-quiz.dll
+C:\Users\acohr\source\repos\lab01-austin\class01-CsharpBasics\about-me-quiz\obj\Debug\netcoreapp2.0\about-me-quiz.pdb
