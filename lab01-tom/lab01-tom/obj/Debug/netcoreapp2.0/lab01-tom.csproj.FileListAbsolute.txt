@@ -1,0 +1,11 @@
+C:\Users\Tom\Documents\Visual Studio 2017\Projects\class01-CsharpBasics\lab01-tom\lab01-tom\bin\Debug\netcoreapp2.0\lab01-tom.deps.json
+C:\Users\Tom\Documents\Visual Studio 2017\Projects\class01-CsharpBasics\lab01-tom\lab01-tom\bin\Debug\netcoreapp2.0\lab01-tom.runtimeconfig.json
+C:\Users\Tom\Documents\Visual Studio 2017\Projects\class01-CsharpBasics\lab01-tom\lab01-tom\bin\Debug\netcoreapp2.0\lab01-tom.runtimeconfig.dev.json
+C:\Users\Tom\Documents\Visual Studio 2017\Projects\class01-CsharpBasics\lab01-tom\lab01-tom\bin\Debug\netcoreapp2.0\lab01-tom.dll
+C:\Users\Tom\Documents\Visual Studio 2017\Projects\class01-CsharpBasics\lab01-tom\lab01-tom\bin\Debug\netcoreapp2.0\lab01-tom.pdb
+C:\Users\Tom\Documents\Visual Studio 2017\Projects\class01-CsharpBasics\lab01-tom\lab01-tom\obj\Debug\netcoreapp2.0\lab01-tom.csprojResolveAssemblyReference.cache
+C:\Users\Tom\Documents\Visual Studio 2017\Projects\class01-CsharpBasics\lab01-tom\lab01-tom\obj\Debug\netcoreapp2.0\lab01-tom.csproj.CoreCompileInputs.cache
+C:\Users\Tom\Documents\Visual Studio 2017\Projects\class01-CsharpBasics\lab01-tom\lab01-tom\obj\Debug\netcoreapp2.0\lab01-tom.AssemblyInfoInputs.cache
+C:\Users\Tom\Documents\Visual Studio 2017\Projects\class01-CsharpBasics\lab01-tom\lab01-tom\obj\Debug\netcoreapp2.0\lab01-tom.AssemblyInfo.cs
+C:\Users\Tom\Documents\Visual Studio 2017\Projects\class01-CsharpBasics\lab01-tom\lab01-tom\obj\Debug\netcoreapp2.0\lab01-tom.dll
+C:\Users\Tom\Documents\Visual Studio 2017\Projects\class01-CsharpBasics\lab01-tom\lab01-tom\obj\Debug\netcoreapp2.0\lab01-tom.pdb
