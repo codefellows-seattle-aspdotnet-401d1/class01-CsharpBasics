@@ -13,15 +13,16 @@ namespace lab01_tom
             NameQuestion();
             Question1();
             Question2();
-            //Question3();
+            Question3();
+            Question4();
             Console.Read();
         }
 
         static void NameQuestion()
         {
             Console.WriteLine("What is your name?");
-            string userInput = Console.ReadLine();
-            if (string.IsNullOrEmpty(userInput.Trim()))
+            string userName = Console.ReadLine();
+            if (string.IsNullOrEmpty(userName.Trim()))
             {
                 Console.WriteLine("Please type a name!");
 
@@ -29,7 +30,7 @@ namespace lab01_tom
             }
             else
             {
-                Console.WriteLine($"Welcome {userInput}, let's play a game!");
+                Console.WriteLine($"Welcome {userName}, let's play a game!");
             }
         }
 
@@ -51,11 +52,14 @@ namespace lab01_tom
         {
             Console.WriteLine("Out of the following, who is my favorite member of the Justice League?");
             string[] heroesArray = new string[] { "Batman", "Superman", "Wonder Woman", "The Flash"};
+
             foreach (string heroes in heroesArray)
             {
                 Console.WriteLine(heroes);
             }
+
             string hero = Console.ReadLine();
+
             if (hero == "Batman" || hero == "batman")
             {
                 Console.WriteLine("That's right!");
@@ -66,9 +70,37 @@ namespace lab01_tom
             }
         }
 
-        static void Questions3()
+        static void Question3()
         {
-
+            Console.WriteLine("I drive a Jeep. Yes or No?");
+            string car = Console.ReadLine();
+            if (car == "No" || car == "no")
+            {
+                Console.WriteLine("Correct. I actually drive a Volkswagen.");
+            }
+            else
+            {
+                Console.WriteLine("No, I don't, but Jeeps are cool!");
+            }
         }
+
+        static void Question4()
+        {
+            Console.WriteLine("I have a sister. Yes or No?");
+            string sister = Console.ReadLine();
+            if (sister == "Yes" || sister == "yes")
+            {
+                Console.WriteLine("Yep, I have a younger sister.");
+            }
+            else
+            {
+                Console.WriteLine("I do! I have a younger sister.");
+            }
+        }
+
+        //static int Total()
+        //{
+
+        //}
     }
 }
