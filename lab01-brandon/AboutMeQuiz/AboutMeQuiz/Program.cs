@@ -25,23 +25,47 @@ namespace AboutMeQuiz
                 Console.WriteLine("Too bad, we're doing it anyway!");
             }
 
-            Console.WriteLine("Was I born in Washington?");
-            correctAnswersTotal += QuizOne(Console.ReadLine().ToLower());
+            int[] randomSelection = new int[3];
+            randomSelection = RandomThreeNumbers();
 
-            Console.WriteLine("What is one of my favorite colors? (There are several possible answers, so I will give you 3 tries!)");
-            correctAnswersTotal += QuizTwo(Console.ReadLine().ToLower());
+            foreach (int number in randomSelection)
+            {
+                if (number == 1)
+                {
+                    Console.WriteLine("Was I born in Washington?");
+                    correctAnswersTotal += QuizOne(Console.ReadLine().ToLower()); 
+                }
 
-            Console.WriteLine("Do I like cats?");
-            correctAnswersTotal += QuizThree(Console.ReadLine().ToLower());
+                if (number == 2)
+                {
+                    Console.WriteLine("What is one of my favorite colors? (There are several possible answers, so I will give you 3 tries!)");
+                    correctAnswersTotal += QuizTwo(Console.ReadLine().ToLower()); 
+                }
 
-            Console.WriteLine("Am I over 30?");
-            correctAnswersTotal += QuizFour(Console.ReadLine().ToLower());
+                if (number == 3)
+                {
+                    Console.WriteLine("Do I like cats?");
+                    correctAnswersTotal += QuizThree(Console.ReadLine().ToLower()); 
+                }
 
-            Console.WriteLine("Can I play the piano?");
-            correctAnswersTotal += QuizFive(Console.ReadLine().ToLower());
+                if (number == 4)
+                {
+                    Console.WriteLine("Am I over 30?");
+                    correctAnswersTotal += QuizFour(Console.ReadLine().ToLower()); 
+                }
 
-            Console.WriteLine("Do I speak any foreign languages?");
-            correctAnswersTotal += QuizSix(Console.ReadLine().ToLower());
+                if (number == 5)
+                {
+                    Console.WriteLine("Can I play the piano?");
+                    correctAnswersTotal += QuizFive(Console.ReadLine().ToLower()); 
+                }
+
+                if (number == 6)
+                {
+                    Console.WriteLine("Do I speak any foreign languages?");
+                    correctAnswersTotal += QuizSix(Console.ReadLine().ToLower()); 
+                } 
+            }
 
             Console.WriteLine($"You got {correctAnswersTotal} question(s) correct!");
             Console.Read();
@@ -79,7 +103,7 @@ namespace AboutMeQuiz
                 if (answers.Contains(response))
                 {
                     Console.WriteLine($"Correct! The color {response} is one of my favorite colors!");
-                    i = 3;
+                    i = 0;
                     accumulator++;
                 }
                 else if (!answers.Contains(response))
@@ -191,6 +215,26 @@ namespace AboutMeQuiz
             }
 
             return accumulator;
+        }
+
+        static int[] RandomThreeNumbers()
+        {
+            Random rnd = new Random();
+
+            int one;
+            int two;
+            int three;
+
+            do
+            {
+                one = rnd.Next(1, 6);
+                two = rnd.Next(1, 6);
+                three = rnd.Next(1, 6); 
+            } while (one == two || one == three || two == three);
+
+            int[] randomStuff = new int[] { one, two, three };
+
+            return randomStuff;
         }
     }
 }
