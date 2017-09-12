@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace AboutMeQuiz
 {
@@ -23,7 +24,7 @@ namespace AboutMeQuiz
                 Console.WriteLine("Too bad, we're doing it anyway!");
             }
 
-            int correctAnswersTotal = QuizOne();
+            int correctAnswersTotal = QuizOne() + QuizTwo();
 
             Console.WriteLine($"You got {correctAnswersTotal} questions correct!");
             Console.Read();
@@ -48,6 +49,35 @@ namespace AboutMeQuiz
             {
                 Console.WriteLine("I didn't understand your response, please try again.");
                 QuizOne();
+            }
+
+            return accumulator;
+        }
+
+        static int QuizTwo()
+        {
+            Console.WriteLine("What is one of my favorite colors? (There are several possible answers, so I will give you 3 tries!)");
+            int accumulator = 0;
+            string[] answers = new string[] { "blue", "green", "purple", "red", "black" };
+
+            for (int i = 0; i < 4; i++)
+            {
+                string response = Console.ReadLine().ToLower();
+                if (answers.Contains(response))
+                {
+                    Console.WriteLine($"Correct! The color {response} is one of my favorite colors!");
+                    i = 4;
+                    accumulator++;
+                }
+                else if (!answers.Contains(response))
+                {
+                    Console.WriteLine("Sorry, try again!");
+                }
+                else
+                {
+                    Console.WriteLine("I didn't understand your response, please try again.");
+                    i--;
+                } 
             }
 
             return accumulator;
