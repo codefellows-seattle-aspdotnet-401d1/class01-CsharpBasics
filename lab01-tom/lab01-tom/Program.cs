@@ -4,40 +4,17 @@ namespace lab01_tom
 {
     class Program
     {
-        static void Main(string[] args)
+        int[] questions = new int[4];
+
+
+    static void Main(string[] args)
         {
+
             NameQuestion();
-            IterationStatements();
+            Question1();
+            Question2();
+            //Question3();
             Console.Read();
-        }
-
-        static void IterationStatements()
-        {
-            for (int x = 0; x < 10; x++)
-            {
-                Console.WriteLine(x);
-            }
-
-            int[] numberArray = new int[] { 72, 42, 21, 38 };
-            foreach (int number in numberArray)
-            {
-                Console.WriteLine(number);
-            }
-
-            int z = 0;
-            while (z < 10)
-            {
-                Console.WriteLine(z);
-                z++;
-            }
-
-            int n = 0;
-            do
-            {
-                Console.WriteLine(n);
-                n++;
-            }
-            while (n < 5);
         }
 
         static void NameQuestion()
@@ -54,6 +31,44 @@ namespace lab01_tom
             {
                 Console.WriteLine($"Welcome {userInput}, let's play a game!");
             }
+        }
+
+        static void Question1()
+        {
+            Console.WriteLine("My current favorite game is Overwatch. Yes or No?");
+            string game = Console.ReadLine();
+            if (game == "yes" || game == "Yes")
+            {
+                Console.WriteLine("Yes it is. D.Va is the best!");
+            }
+            else
+            {
+                Console.WriteLine("Wrong, it is!");
+            }
+        }
+
+        static void Question2()
+        {
+            Console.WriteLine("Out of the following, who is my favorite member of the Justice League?");
+            string[] heroesArray = new string[] { "Batman", "Superman", "Wonder Woman", "The Flash"};
+            foreach (string heroes in heroesArray)
+            {
+                Console.WriteLine(heroes);
+            }
+            string hero = Console.ReadLine();
+            if (hero == "Batman" || hero == "batman")
+            {
+                Console.WriteLine("That's right!");
+            }
+            else
+            {
+                Console.WriteLine("Wrong, it's Batman!");
+            }
+        }
+
+        static void Questions3()
+        {
+
         }
     }
 }
