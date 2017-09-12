@@ -16,8 +16,8 @@ namespace lab01_brian
             Console.WriteLine($"Hello {player.UserName} welcome to my game!");
             Console.Write(@"Are you ready to play?
 Y/n: ");
-            var readyToPlay = Console.ReadLine();
-            if (!string.IsNullOrEmpty(readyToPlay))
+            string readyToPlay = Console.ReadLine();
+            if (!string.IsNullOrEmpty(readyToPlay.Trim()))
             {
                 GameStart(readyToPlay);
             }
