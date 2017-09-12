@@ -673,11 +673,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Duane Rush\\source\\repos\\lab01-duane\\lab01-duane\\lab01-duane.csproj",
+      "projectUniqueName": "C:\\Users\\Duane Rush\\Source\\Repos\\class01-CsharpBasics\\lab01-duane\\lab01-duane\\lab01-duane.csproj",
       "projectName": "lab01-duane",
-      "projectPath": "C:\\Users\\Duane Rush\\source\\repos\\lab01-duane\\lab01-duane\\lab01-duane.csproj",
+      "projectPath": "C:\\Users\\Duane Rush\\Source\\Repos\\class01-CsharpBasics\\lab01-duane\\lab01-duane\\lab01-duane.csproj",
       "packagesPath": "C:\\Users\\Duane Rush\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Duane Rush\\source\\repos\\lab01-duane\\lab01-duane\\obj\\",
+      "outputPath": "C:\\Users\\Duane Rush\\Source\\Repos\\class01-CsharpBasics\\lab01-duane\\lab01-duane\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
