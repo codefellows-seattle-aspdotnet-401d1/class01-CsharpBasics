@@ -31,6 +31,12 @@ namespace AboutMeQuiz
             Console.WriteLine("What is one of my favorite colors? (There are several possible answers, so I will give you 3 tries!)");
             correctAnswersTotal += QuizTwo(Console.ReadLine().ToLower());
 
+            Console.WriteLine("Do I like cats?");
+            correctAnswersTotal += QuizThree(Console.ReadLine().ToLower());
+
+            Console.WriteLine("Am I over 30?");
+            correctAnswersTotal += QuizFour(Console.ReadLine().ToLower());
+
             Console.WriteLine($"You got {correctAnswersTotal} question(s) correct!");
             Console.Read();
         }
@@ -88,6 +94,50 @@ namespace AboutMeQuiz
                     response = Console.ReadLine().ToLower();
                     i++;
                 } 
+            }
+
+            return accumulator;
+        }
+
+        static int QuizThree(string response)
+        {
+            int accumulator = 0;
+
+            if (response == "y" || response == "yes")
+            {
+                Console.WriteLine("I do! I also like dogs, but cats are my favorite.");
+                accumulator++;
+            }
+            else if (response == "n" || response == "no")
+            {
+                Console.WriteLine("Incorrect! I'm a big fan.");
+            }
+            else
+            {
+                Console.WriteLine("I didn't understand your response, please try again.");
+                QuizOne(Console.ReadLine().ToLower());
+            }
+
+            return accumulator;
+        }
+
+        static int QuizFour(string response)
+        {
+            int accumulator = 0;
+
+            if (response == "y" || response == "yes")
+            {
+                Console.WriteLine("Yes! I am 31.");
+                accumulator++;
+            }
+            else if (response == "n" || response == "no")
+            {
+                Console.WriteLine("Thanks, but I am actually 31!");
+            }
+            else
+            {
+                Console.WriteLine("I didn't understand your response, please try again.");
+                QuizOne(Console.ReadLine().ToLower());
             }
 
             return accumulator;
