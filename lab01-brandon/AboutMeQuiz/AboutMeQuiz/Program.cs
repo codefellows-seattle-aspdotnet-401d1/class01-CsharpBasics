@@ -26,6 +26,10 @@ namespace AboutMeQuiz
                 {
                     Console.WriteLine("Too bad, we're doing it anyway!");
                 }
+                else
+                {
+                    throw new FormatException();
+                }
 
                 int[] randomSelection = new int[3];
                 randomSelection = RandomThreeNumbers();
@@ -72,6 +76,11 @@ namespace AboutMeQuiz
                 Console.WriteLine($"You got {correctAnswersTotal} question(s) correct!");
                 Console.Read();
             }
+            catch (FormatException fe)
+            {
+                Console.WriteLine("I didn't understand your response, restarting.");
+                MainQuizHandler();
+            }
             catch (Exception ex)
             {
                 Console.WriteLine($"Something bad happened: {ex}. Hopefully this helps.");
@@ -93,8 +102,7 @@ namespace AboutMeQuiz
             }
             else
             {
-                Console.WriteLine("I didn't understand your response, please try again.");
-                QuizOne(Console.ReadLine().ToLower());
+                throw new FormatException();
             }
 
             return accumulator;
@@ -151,8 +159,7 @@ namespace AboutMeQuiz
             }
             else
             {
-                Console.WriteLine("I didn't understand your response, please try again.");
-                QuizOne(Console.ReadLine().ToLower());
+                throw new FormatException();
             }
 
             return accumulator;
@@ -173,8 +180,7 @@ namespace AboutMeQuiz
             }
             else
             {
-                Console.WriteLine("I didn't understand your response, please try again.");
-                QuizOne(Console.ReadLine().ToLower());
+                throw new FormatException();
             }
 
             return accumulator;
@@ -195,8 +201,7 @@ namespace AboutMeQuiz
             }
             else
             {
-                Console.WriteLine("I didn't understand your response, please try again.");
-                QuizOne(Console.ReadLine().ToLower());
+                throw new FormatException();
             }
 
             return accumulator;
@@ -217,8 +222,7 @@ namespace AboutMeQuiz
             }
             else
             {
-                Console.WriteLine("I didn't understand your response, please try again.");
-                QuizOne(Console.ReadLine().ToLower());
+                throw new FormatException();
             }
 
             return accumulator;
