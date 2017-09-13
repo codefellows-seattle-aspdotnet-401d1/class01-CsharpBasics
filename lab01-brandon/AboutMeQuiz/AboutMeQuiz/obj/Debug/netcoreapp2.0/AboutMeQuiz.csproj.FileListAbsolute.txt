@@ -1,0 +1,11 @@
+C:\Users\akure\dotnet401\class01-CsharpBasics\lab01-brandon\AboutMeQuiz\AboutMeQuiz\bin\Debug\netcoreapp2.0\AboutMeQuiz.deps.json
+C:\Users\akure\dotnet401\class01-CsharpBasics\lab01-brandon\AboutMeQuiz\AboutMeQuiz\bin\Debug\netcoreapp2.0\AboutMeQuiz.runtimeconfig.json
+C:\Users\akure\dotnet401\class01-CsharpBasics\lab01-brandon\AboutMeQuiz\AboutMeQuiz\bin\Debug\netcoreapp2.0\AboutMeQuiz.runtimeconfig.dev.json
+C:\Users\akure\dotnet401\class01-CsharpBasics\lab01-brandon\AboutMeQuiz\AboutMeQuiz\bin\Debug\netcoreapp2.0\AboutMeQuiz.dll
+C:\Users\akure\dotnet401\class01-CsharpBasics\lab01-brandon\AboutMeQuiz\AboutMeQuiz\bin\Debug\netcoreapp2.0\AboutMeQuiz.pdb
+C:\Users\akure\dotnet401\class01-CsharpBasics\lab01-brandon\AboutMeQuiz\AboutMeQuiz\obj\Debug\netcoreapp2.0\AboutMeQuiz.csproj.CoreCompileInputs.cache
+C:\Users\akure\dotnet401\class01-CsharpBasics\lab01-brandon\AboutMeQuiz\AboutMeQuiz\obj\Debug\netcoreapp2.0\AboutMeQuiz.AssemblyInfoInputs.cache
+C:\Users\akure\dotnet401\class01-CsharpBasics\lab01-brandon\AboutMeQuiz\AboutMeQuiz\obj\Debug\netcoreapp2.0\AboutMeQuiz.AssemblyInfo.cs
+C:\Users\akure\dotnet401\class01-CsharpBasics\lab01-brandon\AboutMeQuiz\AboutMeQuiz\obj\Debug\netcoreapp2.0\AboutMeQuiz.dll
+C:\Users\akure\dotnet401\class01-CsharpBasics\lab01-brandon\AboutMeQuiz\AboutMeQuiz\obj\Debug\netcoreapp2.0\AboutMeQuiz.pdb
+C:\Users\akure\dotnet401\class01-CsharpBasics\lab01-brandon\AboutMeQuiz\AboutMeQuiz\obj\Debug\netcoreapp2.0\AboutMeQuiz.csprojResolveAssemblyReference.cache
