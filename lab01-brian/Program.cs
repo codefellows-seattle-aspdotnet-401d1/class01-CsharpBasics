@@ -23,31 +23,13 @@ Y/n: ");
             }
             Console.WriteLine($"Player Score is {player.UserScore}");
             Console.WriteLine("How old do you think Brian is?");
-            if (Int32.TryParse(Console.ReadLine(), out int ageInput))
+            AgeGuess();
+            if (AgeGuess())
             {
-                AgeInput ageGuess = new AgeInput(Convert.ToInt32(ageInput));
-                if (ageGuess.Age == 34)
-                {
-                    Console.WriteLine("Great job, you guessed it!");
-                    player.UserScore++;
-                    Thread.Sleep(1000);
-                    Console.WriteLine("Next Question!");
-                    Thread.Sleep(1000);
-                    Console.Clear();
-                }
-                else
-                {
-                    Console.WriteLine($@"Looks like you guessed {ageGuess.Difference(ageInput)} years off.
-Better Luck next time");
-                    Thread.Sleep(1000);
-                    Console.WriteLine("Next Question!");
-                    Thread.Sleep(1000);
-                    Console.Clear();
-
-                }
+                player.UserScore++;
             }
             string[] CountriesVisited = new[]
-                {"thailand", "sweeden", "neatherlands", "greece", "united kingdom", "italy", "canada", "mexico"};
+                {"thailand", "sweden", "netherlands", "greece", "united kingdom", "italy", "canada", "mexico"};
             for ( int attempts = 5; attempts > 0; attempts--)
             {
                 Console.WriteLine($"Player Score is {player.UserScore}");
@@ -87,6 +69,48 @@ Better Luck next time");
                 Thread.Sleep(1000);
                 Environment.Exit(0);
             }
+        }
+
+        public static bool AgeGuess()
+        {
+            try
+            {
+                string ageGuess = Console.ReadLine();
+                AgeInput usersInput = new AgeInput(Convert.ToInt32(ageGuess));
+                if (usersInput.Age == 34)
+                {
+                    Console.WriteLine("Great job, you guessed it!");
+                    Thread.Sleep(1000);
+                    Console.WriteLine("Next Question!");
+                    Thread.Sleep(2000);
+                    Console.Clear();
+                    return true;
+                }
+                else
+                {
+                    Console.WriteLine($@"Looks like you guessed {usersInput.Difference(Convert.ToInt32(ageGuess))} years off.
+Better Luck next time");
+                    Thread.Sleep(2000);
+                    Console.WriteLine("Next Question!");
+                    Thread.Sleep(2000);
+                    Console.Clear();
+                    return false;
+                }
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine($"{e.GetType().Name}: A non interger vale was entered when an interger vale was expected. Try again...");
+                AgeGuess();
+            }
+            catch (Exception)
+            {
+                throw new Exception("An Unknown execption has occured. Please notify your system admit...");
+            }
+            finally
+            {
+                Console.WriteLine("Let's contineu shall we?");
+            }
+            return false;
         }
     }
 }
