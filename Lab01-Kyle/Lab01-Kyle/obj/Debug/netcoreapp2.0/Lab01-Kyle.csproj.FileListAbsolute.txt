@@ -1,0 +1,11 @@
+C:\Users\Kyler\source\repos\class01-CsharpBasics\Lab01-Kyle\Lab01-Kyle\bin\Debug\netcoreapp2.0\Lab01-Kyle.deps.json
+C:\Users\Kyler\source\repos\class01-CsharpBasics\Lab01-Kyle\Lab01-Kyle\bin\Debug\netcoreapp2.0\Lab01-Kyle.runtimeconfig.json
+C:\Users\Kyler\source\repos\class01-CsharpBasics\Lab01-Kyle\Lab01-Kyle\bin\Debug\netcoreapp2.0\Lab01-Kyle.runtimeconfig.dev.json
+C:\Users\Kyler\source\repos\class01-CsharpBasics\Lab01-Kyle\Lab01-Kyle\bin\Debug\netcoreapp2.0\Lab01-Kyle.dll
+C:\Users\Kyler\source\repos\class01-CsharpBasics\Lab01-Kyle\Lab01-Kyle\bin\Debug\netcoreapp2.0\Lab01-Kyle.pdb
+C:\Users\Kyler\source\repos\class01-CsharpBasics\Lab01-Kyle\Lab01-Kyle\obj\Debug\netcoreapp2.0\Lab01-Kyle.csprojResolveAssemblyReference.cache
+C:\Users\Kyler\source\repos\class01-CsharpBasics\Lab01-Kyle\Lab01-Kyle\obj\Debug\netcoreapp2.0\Lab01-Kyle.csproj.CoreCompileInputs.cache
+C:\Users\Kyler\source\repos\class01-CsharpBasics\Lab01-Kyle\Lab01-Kyle\obj\Debug\netcoreapp2.0\Lab01-Kyle.AssemblyInfoInputs.cache
+C:\Users\Kyler\source\repos\class01-CsharpBasics\Lab01-Kyle\Lab01-Kyle\obj\Debug\netcoreapp2.0\Lab01-Kyle.AssemblyInfo.cs
+C:\Users\Kyler\source\repos\class01-CsharpBasics\Lab01-Kyle\Lab01-Kyle\obj\Debug\netcoreapp2.0\Lab01-Kyle.dll
+C:\Users\Kyler\source\repos\class01-CsharpBasics\Lab01-Kyle\Lab01-Kyle\obj\Debug\netcoreapp2.0\Lab01-Kyle.pdb
