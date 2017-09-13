@@ -16,59 +16,79 @@ namespace AboutMeQuiz
             string response = Console.ReadLine().ToLower();
             int correctAnswersTotal = 0;
 
-            if (response == "y" || response == "yes")
+            try
             {
-                Console.WriteLine("Great! Let's get started:");
+                if (response == "y" || response == "yes")
+                {
+                    Console.WriteLine("Great! Let's get started:");
+                }
+                else if (response == "n" || response == "no")
+                {
+                    Console.WriteLine("Too bad, we're doing it anyway!");
+                }
+                else
+                {
+                    throw new FormatException();
+                }
+
+                int[] randomSelection = new int[3];
+                randomSelection = RandomThreeNumbers();
+
+                foreach (int number in randomSelection)
+                {
+                    if (number == 1)
+                    {
+                        Console.WriteLine("Was I born in Washington?");
+                        correctAnswersTotal += QuizOne(Console.ReadLine().ToLower());
+                    }
+
+                    if (number == 2)
+                    {
+                        Console.WriteLine("What is one of my favorite colors? (There are several possible answers, so I will give you 3 tries!)");
+                        correctAnswersTotal += QuizTwo(Console.ReadLine().ToLower());
+                    }
+
+                    if (number == 3)
+                    {
+                        Console.WriteLine("Do I like cats?");
+                        correctAnswersTotal += QuizThree(Console.ReadLine().ToLower());
+                    }
+
+                    if (number == 4)
+                    {
+                        Console.WriteLine("Am I over 30?");
+                        correctAnswersTotal += QuizFour(Console.ReadLine().ToLower());
+                    }
+
+                    if (number == 5)
+                    {
+                        Console.WriteLine("Can I play the piano?");
+                        correctAnswersTotal += QuizFive(Console.ReadLine().ToLower());
+                    }
+
+                    if (number == 6)
+                    {
+                        Console.WriteLine("Do I speak any foreign languages?");
+                        correctAnswersTotal += QuizSix(Console.ReadLine().ToLower());
+                    }
+                }
+
+                Console.WriteLine($"You got {correctAnswersTotal} question(s) correct!");
             }
-            else if (response == "n" || response == "no")
+            catch (FormatException fe)
             {
-                Console.WriteLine("Too bad, we're doing it anyway!");
+                Console.WriteLine("I didn't understand your response, restarting.");
+                MainQuizHandler();
             }
-
-            int[] randomSelection = new int[3];
-            randomSelection = RandomThreeNumbers();
-
-            foreach (int number in randomSelection)
+            catch (Exception ex)
             {
-                if (number == 1)
-                {
-                    Console.WriteLine("Was I born in Washington?");
-                    correctAnswersTotal += QuizOne(Console.ReadLine().ToLower()); 
-                }
-
-                if (number == 2)
-                {
-                    Console.WriteLine("What is one of my favorite colors? (There are several possible answers, so I will give you 3 tries!)");
-                    correctAnswersTotal += QuizTwo(Console.ReadLine().ToLower()); 
-                }
-
-                if (number == 3)
-                {
-                    Console.WriteLine("Do I like cats?");
-                    correctAnswersTotal += QuizThree(Console.ReadLine().ToLower()); 
-                }
-
-                if (number == 4)
-                {
-                    Console.WriteLine("Am I over 30?");
-                    correctAnswersTotal += QuizFour(Console.ReadLine().ToLower()); 
-                }
-
-                if (number == 5)
-                {
-                    Console.WriteLine("Can I play the piano?");
-                    correctAnswersTotal += QuizFive(Console.ReadLine().ToLower()); 
-                }
-
-                if (number == 6)
-                {
-                    Console.WriteLine("Do I speak any foreign languages?");
-                    correctAnswersTotal += QuizSix(Console.ReadLine().ToLower()); 
-                } 
+                Console.WriteLine($"Something bad happened: {ex}. Hopefully this helps.");
             }
-
-            Console.WriteLine($"You got {correctAnswersTotal} question(s) correct!");
-            Console.Read();
+            finally
+            {
+                Console.WriteLine("Thank you for playing!");
+                Console.Read();
+            }
         }
 
         static int QuizOne(string response)
@@ -86,8 +106,7 @@ namespace AboutMeQuiz
             }
             else
             {
-                Console.WriteLine("I didn't understand your response, please try again.");
-                QuizOne(Console.ReadLine().ToLower());
+                throw new FormatException();
             }
 
             return accumulator;
@@ -144,8 +163,7 @@ namespace AboutMeQuiz
             }
             else
             {
-                Console.WriteLine("I didn't understand your response, please try again.");
-                QuizOne(Console.ReadLine().ToLower());
+                throw new FormatException();
             }
 
             return accumulator;
@@ -166,8 +184,7 @@ namespace AboutMeQuiz
             }
             else
             {
-                Console.WriteLine("I didn't understand your response, please try again.");
-                QuizOne(Console.ReadLine().ToLower());
+                throw new FormatException();
             }
 
             return accumulator;
@@ -188,8 +205,7 @@ namespace AboutMeQuiz
             }
             else
             {
-                Console.WriteLine("I didn't understand your response, please try again.");
-                QuizOne(Console.ReadLine().ToLower());
+                throw new FormatException();
             }
 
             return accumulator;
@@ -210,8 +226,7 @@ namespace AboutMeQuiz
             }
             else
             {
-                Console.WriteLine("I didn't understand your response, please try again.");
-                QuizOne(Console.ReadLine().ToLower());
+                throw new FormatException();
             }
 
             return accumulator;
