@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ConsoleApp1
 {
@@ -12,11 +13,12 @@ namespace ConsoleApp1
             Console.WriteLine($"Thank you {userName}, let's begin.");
             Console.Read();
             CityBorn();
-            NumberOfToppings();
             KillForPizza();
-            Total();
-            Console.WriteLine($"Game Over {userName}, thanks for playing!");
-            Console.Read();
+            NumberOfToppings();
+            TypeOfToppings();
+            EndOfGame();
+            //Total();
+
         }
 
         static int CityBorn()
@@ -48,11 +50,11 @@ namespace ConsoleApp1
             return counter;
         }
 
-        static int KillForPizza()
+        static void KillForPizza()
         {
             Console.WriteLine("Would I kill for some pizza?");
             Console.Read();
-            int counter;
+            //int counter;
             string kill = Console.ReadLine().ToLower();
             //Console.Read();
 
@@ -66,69 +68,93 @@ namespace ConsoleApp1
             {
                 Console.WriteLine("Right, because murder is illigal, but I really do want some pizza right now.");
                 Console.Read();
-                counter++;
             }
             else
             {
                 Console.WriteLine("Please answer with 'yes' or 'no'.");
                 KillForPizza();
             }
-            return counter;
         }
 
-        static int NumberOfToppings()
+        static void NumberOfToppings()
         {
-
-            int guesses = 0;
-            int counter;
+            int guesses = 5;
             do
             {
-                Console.WriteLine("How many toppings do I prefer on my pizza?");
-                Console.ReadLine();
-                var userInput = Console.ReadLine();
-                int numToppings;
-                bool result = Int32.TryParse(userInput, out numToppings);
-                if (result == false)
+                try
                 {
-                    Console.WriteLine("Please enter a number");
-                    Console.Read();
+                    Console.WriteLine("How many toppings do I prefer on my pizza?");
+                    Console.WriteLine($"You have {guesses} guesses.");
+
+                    int userInput = Convert.ToInt32(Console.ReadLine());
+
+                    if (userInput == 4)
+                    {
+                        Console.WriteLine("Great guess!  4 toppings is perfect for maximum yummage!");
+                        break;
+                    }
+                    if (userInput > 4)
+                    {
+                        Console.WriteLine("Slow down High Speed, don't overload the pie!  Try agian.");
+                        guesses--;
+                    }
+                    if (userInput < 4)
+                    {
+                        Console.WriteLine("That pie is almost naked!  More please.");
+                        guesses--;
+                    }
                 }
-
-
-                if (numToppings < 4)
+                catch (FormatException)
                 {
-                    Console.WriteLine("That's almost plain! More please!");
-                    Console.Read();
-                    guesses++;
-
+                    Console.WriteLine("Please enter a number./Format Exception");
                 }
-                if (numToppings > 4)
+                catch (Exception)
                 {
-                    Console.WriteLine("Hey, don't overload the pie! Try again.");
-                    Console.Read();
-                    guesses++;
-
+                    Console.WriteLine("Please enter a number. /Exception Exception");
                 }
-                if (numToppings == 4)
-                {
-                    Console.WriteLine("Bingo, I think 4 toppings in optimal pizza yummage!");
-                    Console.Read();
-                    counter++;
-                    break;
-                }
-
             }
-            while (guesses < 5);
-            if (guesses == 5)
-                Console.WriteLine("Sorry, you are out of guesses.  I was looking for 4 topppings.");
-            Console.Read();
-            return counter;
+            while (guesses > 0);
+            if (guesses == 0)
+            {
+                Console.WriteLine("Sorry, you are out of guesses. I think 4 toppings is perfect for maximum yummage!");
+                Console.Read();
+            }
         }
 
-        static void Total()
+        static void TypeOfToppings()
         {
-            int total = CityBorn() + NumberOfToppings() + KillForPizza();
-            Console.WriteLine($"You got {total} questions right!");
+            List<string> toppings = new List<string>();
+            toppings.Add("pepperoni");
+            toppings.Add("sausage");
+            toppings.Add("jalepeno");
+            toppings.Add("cheese");
+
+            Console.WriteLine("What toppings do I prefer on my pizza?");
+            string toppingGuess = Console.ReadLine().ToLower();
+
+            if (toppings.Contains(toppingGuess))
+            {
+                Console.WriteLine($"Great Guess, {toppingGuess} makes pizza delicious!");
+                Console.Read();
+            }else
+            {
+                Console.WriteLine("Eww, gross.  That is NOT what I want on my pie.");
+                Console.Read();
+            }
+
         }
+        static void EndOfGame()
+        {
+            Console.WriteLine($"Game Over. Thanks for playing!");
+            Console.Read();
+        }
+
+
+
+        //static void Total()
+        //{
+        //    int total = CityBorn() + NumberOfToppings() + KillForPizza();
+        //    Console.WriteLine($"You got {total} questions right!");
+        //}
     }
 }
