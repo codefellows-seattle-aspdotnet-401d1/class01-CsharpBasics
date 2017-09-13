@@ -16,59 +16,66 @@ namespace AboutMeQuiz
             string response = Console.ReadLine().ToLower();
             int correctAnswersTotal = 0;
 
-            if (response == "y" || response == "yes")
+            try
             {
-                Console.WriteLine("Great! Let's get started:");
+                if (response == "y" || response == "yes")
+                {
+                    Console.WriteLine("Great! Let's get started:");
+                }
+                else if (response == "n" || response == "no")
+                {
+                    Console.WriteLine("Too bad, we're doing it anyway!");
+                }
+
+                int[] randomSelection = new int[3];
+                randomSelection = RandomThreeNumbers();
+
+                foreach (int number in randomSelection)
+                {
+                    if (number == 1)
+                    {
+                        Console.WriteLine("Was I born in Washington?");
+                        correctAnswersTotal += QuizOne(Console.ReadLine().ToLower());
+                    }
+
+                    if (number == 2)
+                    {
+                        Console.WriteLine("What is one of my favorite colors? (There are several possible answers, so I will give you 3 tries!)");
+                        correctAnswersTotal += QuizTwo(Console.ReadLine().ToLower());
+                    }
+
+                    if (number == 3)
+                    {
+                        Console.WriteLine("Do I like cats?");
+                        correctAnswersTotal += QuizThree(Console.ReadLine().ToLower());
+                    }
+
+                    if (number == 4)
+                    {
+                        Console.WriteLine("Am I over 30?");
+                        correctAnswersTotal += QuizFour(Console.ReadLine().ToLower());
+                    }
+
+                    if (number == 5)
+                    {
+                        Console.WriteLine("Can I play the piano?");
+                        correctAnswersTotal += QuizFive(Console.ReadLine().ToLower());
+                    }
+
+                    if (number == 6)
+                    {
+                        Console.WriteLine("Do I speak any foreign languages?");
+                        correctAnswersTotal += QuizSix(Console.ReadLine().ToLower());
+                    }
+                }
+
+                Console.WriteLine($"You got {correctAnswersTotal} question(s) correct!");
+                Console.Read();
             }
-            else if (response == "n" || response == "no")
+            catch (Exception ex)
             {
-                Console.WriteLine("Too bad, we're doing it anyway!");
+                Console.WriteLine($"Something bad happened: {ex}. Hopefully this helps.");
             }
-
-            int[] randomSelection = new int[3];
-            randomSelection = RandomThreeNumbers();
-
-            foreach (int number in randomSelection)
-            {
-                if (number == 1)
-                {
-                    Console.WriteLine("Was I born in Washington?");
-                    correctAnswersTotal += QuizOne(Console.ReadLine().ToLower()); 
-                }
-
-                if (number == 2)
-                {
-                    Console.WriteLine("What is one of my favorite colors? (There are several possible answers, so I will give you 3 tries!)");
-                    correctAnswersTotal += QuizTwo(Console.ReadLine().ToLower()); 
-                }
-
-                if (number == 3)
-                {
-                    Console.WriteLine("Do I like cats?");
-                    correctAnswersTotal += QuizThree(Console.ReadLine().ToLower()); 
-                }
-
-                if (number == 4)
-                {
-                    Console.WriteLine("Am I over 30?");
-                    correctAnswersTotal += QuizFour(Console.ReadLine().ToLower()); 
-                }
-
-                if (number == 5)
-                {
-                    Console.WriteLine("Can I play the piano?");
-                    correctAnswersTotal += QuizFive(Console.ReadLine().ToLower()); 
-                }
-
-                if (number == 6)
-                {
-                    Console.WriteLine("Do I speak any foreign languages?");
-                    correctAnswersTotal += QuizSix(Console.ReadLine().ToLower()); 
-                } 
-            }
-
-            Console.WriteLine($"You got {correctAnswersTotal} question(s) correct!");
-            Console.Read();
         }
 
         static int QuizOne(string response)
