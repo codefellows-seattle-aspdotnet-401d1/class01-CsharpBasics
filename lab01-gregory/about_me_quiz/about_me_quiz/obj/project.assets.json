@@ -673,11 +673,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\source\\repos\\class01-CsharpBasics\\lab01-gregory\\about_me_quiz\\about_me_quiz\\about_me_quiz.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\Source\\Repos\\class01-CsharpBasics\\lab01-gregory\\about_me_quiz\\about_me_quiz\\about_me_quiz.csproj",
       "projectName": "about_me_quiz",
-      "projectPath": "C:\\Users\\admin\\source\\repos\\class01-CsharpBasics\\lab01-gregory\\about_me_quiz\\about_me_quiz\\about_me_quiz.csproj",
+      "projectPath": "C:\\Users\\admin\\Source\\Repos\\class01-CsharpBasics\\lab01-gregory\\about_me_quiz\\about_me_quiz\\about_me_quiz.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\source\\repos\\class01-CsharpBasics\\lab01-gregory\\about_me_quiz\\about_me_quiz\\obj\\",
+      "outputPath": "C:\\Users\\admin\\Source\\Repos\\class01-CsharpBasics\\lab01-gregory\\about_me_quiz\\about_me_quiz\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
