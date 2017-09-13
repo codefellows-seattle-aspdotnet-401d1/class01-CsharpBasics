@@ -73,7 +73,7 @@ namespace Lab01_Kyle
         {
             int CorrectAnswerTotal = QuestionOne() + QuestionTwo();
             Console.WriteLine($"You got {CorrectAnswerTotal} Correct!");
-
+            //needed a change to commit branch
         }
     }
 }
