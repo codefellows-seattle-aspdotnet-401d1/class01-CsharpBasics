@@ -23,12 +23,11 @@ Y/n: ");
             }
             Console.WriteLine($"Player Score is {player.UserScore}");
             Console.WriteLine("How old do you think Brian is?");
-            AgeGuess();
             if (AgeGuess())
             {
                 player.UserScore++;
             }
-            string[] CountriesVisited = new[]
+            string[] countriesVisited = new[]
                 {"thailand", "sweden", "netherlands", "greece", "united kingdom", "italy", "canada", "mexico"};
             for ( int attempts = 5; attempts > 0; attempts--)
             {
@@ -36,7 +35,7 @@ Y/n: ");
                 Console.WriteLine($"You have {attempts} attempts to guess which countries i've visited");
                 Console.Write("Enter a country name: ");
                 var userInput = Console.ReadLine();
-                if (CountriesVisited.Contains(userInput.ToLower().Trim()))
+                if (countriesVisited.Contains(userInput.ToLower().Trim()))
                 {
                     Console.WriteLine($"Great guess! I have visited {userInput}");
                     player.UserScore++;
