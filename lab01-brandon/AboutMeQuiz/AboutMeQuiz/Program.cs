@@ -74,7 +74,6 @@ namespace AboutMeQuiz
                 }
 
                 Console.WriteLine($"You got {correctAnswersTotal} question(s) correct!");
-                Console.Read();
             }
             catch (FormatException fe)
             {
@@ -84,6 +83,11 @@ namespace AboutMeQuiz
             catch (Exception ex)
             {
                 Console.WriteLine($"Something bad happened: {ex}. Hopefully this helps.");
+            }
+            finally
+            {
+                Console.WriteLine("Thank you for playing!");
+                Console.Read();
             }
         }
 
