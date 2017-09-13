@@ -8,20 +8,13 @@ namespace lab01_Erik
         static void Main(string[] args)
         {
             Console.WriteLine("This is Eriks about me quiz");
+            Greeting();
             int questionsRight = 0;
             questionsRight += VideoGames();
-            bool car = true;
-            while (car)
-            {
-                MyCar();
-                if (MyCar() == 1)
-                {
-                    car = false;
-                }
-            }
+            questionsRight += MyCar(); 
             Console.WriteLine($"you got {questionsRight}/2 right");
             Console.Read();
-        }       
+        }    
         static int VideoGames()
         {
             Console.WriteLine("Does Erik Like VideoGames?.. (yes or no)");
@@ -35,7 +28,7 @@ namespace lab01_Erik
             }
             else
             {
-                Console.WriteLine("Nope Sorry wrong");
+                Console.WriteLine("Nope wrong");
                 return 0;
             }
         
@@ -43,7 +36,7 @@ namespace lab01_Erik
         static int MyCar()
         {
             string[] carName = new string[3] { "NISSAN", "TOYOTA", "FORD"};
-            Console.WriteLine("What company made Erik's car?");
+            Console.WriteLine("name a car manufacturer that erik has used.");
             string userAnswer = Console.ReadLine().ToUpper();
             int answer = 0;
             foreach (string make in carName)
@@ -51,16 +44,26 @@ namespace lab01_Erik
                 if(userAnswer == make)
                 {
                     Console.WriteLine("nice work that is correct");
-                    answer = 1; 
+                    answer += 1; 
                 }
                 else
                 {
-                    Console.WriteLine("sorry try again");
-                    answer = 0; 
+                    answer += 0; 
                 }
+            }
+            if (answer == 0)
+            {
+                Console.WriteLine("Sorry that was incorect!..");
             }
             return answer; 
         }
+        static void Greeting()
+        {
+            Console.WriteLine("What is your name?");
+            string userName = Console.ReadLine();
+            Console.WriteLine($"Hello {userName}");
+        }
+        
    
     }
 }
