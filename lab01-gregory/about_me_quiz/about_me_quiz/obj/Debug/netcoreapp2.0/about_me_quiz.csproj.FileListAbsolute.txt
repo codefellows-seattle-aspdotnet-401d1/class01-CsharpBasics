@@ -1,0 +1,11 @@
+C:\Users\admin\source\repos\class01-CsharpBasics\lab01-gregory\about_me_quiz\about_me_quiz\bin\Debug\netcoreapp2.0\about_me_quiz.deps.json
+C:\Users\admin\source\repos\class01-CsharpBasics\lab01-gregory\about_me_quiz\about_me_quiz\bin\Debug\netcoreapp2.0\about_me_quiz.runtimeconfig.json
+C:\Users\admin\source\repos\class01-CsharpBasics\lab01-gregory\about_me_quiz\about_me_quiz\bin\Debug\netcoreapp2.0\about_me_quiz.runtimeconfig.dev.json
+C:\Users\admin\source\repos\class01-CsharpBasics\lab01-gregory\about_me_quiz\about_me_quiz\bin\Debug\netcoreapp2.0\about_me_quiz.dll
+C:\Users\admin\source\repos\class01-CsharpBasics\lab01-gregory\about_me_quiz\about_me_quiz\bin\Debug\netcoreapp2.0\about_me_quiz.pdb
+C:\Users\admin\source\repos\class01-CsharpBasics\lab01-gregory\about_me_quiz\about_me_quiz\obj\Debug\netcoreapp2.0\about_me_quiz.csprojResolveAssemblyReference.cache
+C:\Users\admin\source\repos\class01-CsharpBasics\lab01-gregory\about_me_quiz\about_me_quiz\obj\Debug\netcoreapp2.0\about_me_quiz.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\class01-CsharpBasics\lab01-gregory\about_me_quiz\about_me_quiz\obj\Debug\netcoreapp2.0\about_me_quiz.AssemblyInfoInputs.cache
+C:\Users\admin\source\repos\class01-CsharpBasics\lab01-gregory\about_me_quiz\about_me_quiz\obj\Debug\netcoreapp2.0\about_me_quiz.AssemblyInfo.cs
+C:\Users\admin\source\repos\class01-CsharpBasics\lab01-gregory\about_me_quiz\about_me_quiz\obj\Debug\netcoreapp2.0\about_me_quiz.dll
+C:\Users\admin\source\repos\class01-CsharpBasics\lab01-gregory\about_me_quiz\about_me_quiz\obj\Debug\netcoreapp2.0\about_me_quiz.pdb
