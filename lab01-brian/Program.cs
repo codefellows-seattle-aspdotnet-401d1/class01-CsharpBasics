@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
 using System.Threading;
 
@@ -107,7 +108,7 @@ Better Luck next time");
             }
             finally
             {
-                Console.WriteLine("Let's contineu shall we?");
+                Console.WriteLine();
             }
             return false;
         }
