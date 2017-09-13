@@ -18,9 +18,9 @@ namespace lab01_Erik
         static int VideoGames()
         {
             Console.WriteLine("Does Erik Like VideoGames?.. (yes or no)");
-            String userAnswer = Console.ReadLine();
+            String userAnswer = Console.ReadLine().ToUpper();
            
-            if (userAnswer == "YES" || userAnswer == "yes")
+            if (userAnswer == "YES" || userAnswer == "Y")
             {
                
                 Console.WriteLine("good work you got it right!..");
@@ -39,22 +39,57 @@ namespace lab01_Erik
             Console.WriteLine("name a car manufacturer that erik has used.");
             string userAnswer = Console.ReadLine().ToUpper();
             int answer = 0;
-            foreach (string make in carName)
-            {
-                if(userAnswer == make)
+            bool alarm = true;
+
+            try
+            { 
+                if (userAnswer == "\t" || userAnswer == null || userAnswer == " ")
                 {
-                    Console.WriteLine("nice work that is correct");
-                    answer += 1; 
+                    alarm = false; 
+                    throw new Exception();
                 }
                 else
                 {
-                    answer += 0; 
+                    foreach (string make in carName)
+                    {
+                        if(userAnswer == make)
+                        {
+                        Console.WriteLine("nice work that is correct");
+                        answer += 1; 
+                        }
+                        else
+                        {
+                        answer += 0; 
+                        }
+                    }
+                    if (answer == 0)
+                    {
+                        Console.WriteLine("Sorry that was incorect!..");
+                    }
+
                 }
             }
-            if (answer == 0)
+            catch(Exception e)
             {
-                Console.WriteLine("Sorry that was incorect!..");
+                Console.WriteLine("ERROR IMPROPER INPUT:", e);
             }
+            finally
+            {
+                if(alarm == false)
+                {
+                    Console.WriteLine("would you like to try again? y/n..");
+                    string input = Console.ReadLine().ToLower();
+                    if (input == "y" || input == "yes")
+                    {
+                        MyCar();
+                    }
+                }
+                else
+                {
+                    Environment.Exit(0); 
+                }
+            }
+            
             return answer; 
         }
         static void Greeting()
