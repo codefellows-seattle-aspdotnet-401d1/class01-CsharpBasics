@@ -7,8 +7,8 @@ namespace Lab01_Kyle
         static void Main(string[] args)
         {
             Console.WriteLine("Let's Play A Game!");
-            QuestionOne();
-            QuestionTwo();
+            //QuestionOne();
+            //QuestionTwo();
             CorrectAnswerTotal();
             Console.Read();
         }
@@ -18,7 +18,6 @@ namespace Lab01_Kyle
 
         {
             Console.WriteLine("What State was I born in? I am going to be nice and give you 3 guesses.");
-            Console.ReadLine();
             int AnswerCounter = 0;
             string[] CorrectAnswer = new string[] { "indiana" };
 
@@ -29,6 +28,7 @@ namespace Lab01_Kyle
                 {
                     Console.WriteLine("You are Correct! I was born in Indiana.");
                     AnswerCounter++;
+                    i = 2;
                 }
                 else if (!CorrectAnswer.Contains(response))
                 {
@@ -53,8 +53,7 @@ namespace Lab01_Kyle
 
         {
             Console.WriteLine("Do you think I like Star Trek? Yes or No");
-            Console.ReadLine();
-            string[] CorrectAnswer = new string[] { "no" };
+            string[] CorrectAnswer = new string[] { "no", "n" };
             int AnswerCounter = 0;
             string response = Console.ReadLine().ToLower();
             if (CorrectAnswer.Contains(response))
@@ -71,8 +70,10 @@ namespace Lab01_Kyle
         }
         static void CorrectAnswerTotal()
         {
-            int CorrectAnswerTotal = QuestionOne() + QuestionTwo();
-            Console.WriteLine($"You got {CorrectAnswerTotal} Correct!");
+            int correctAnswerTotal = 0;
+            correctAnswerTotal += QuestionOne(); 
+            correctAnswerTotal += QuestionTwo();
+            Console.WriteLine($"You got {correctAnswerTotal} Correct!");
             //needed a change to commit branch
         }
     }

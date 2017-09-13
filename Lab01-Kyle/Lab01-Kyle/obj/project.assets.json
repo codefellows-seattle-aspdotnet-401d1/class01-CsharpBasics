@@ -673,11 +673,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kyler\\source\\repos\\class01-CsharpBasics\\Lab01-Kyle\\Lab01-Kyle\\Lab01-Kyle.csproj",
+      "projectUniqueName": "C:\\Users\\Kyler\\Source\\Repos\\class01-CsharpBasics\\Lab01-Kyle\\Lab01-Kyle\\Lab01-Kyle.csproj",
       "projectName": "Lab01-Kyle",
-      "projectPath": "C:\\Users\\Kyler\\source\\repos\\class01-CsharpBasics\\Lab01-Kyle\\Lab01-Kyle\\Lab01-Kyle.csproj",
+      "projectPath": "C:\\Users\\Kyler\\Source\\Repos\\class01-CsharpBasics\\Lab01-Kyle\\Lab01-Kyle\\Lab01-Kyle.csproj",
       "packagesPath": "C:\\Users\\Kyler\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kyler\\source\\repos\\class01-CsharpBasics\\Lab01-Kyle\\Lab01-Kyle\\obj\\",
+      "outputPath": "C:\\Users\\Kyler\\Source\\Repos\\class01-CsharpBasics\\Lab01-Kyle\\Lab01-Kyle\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
