@@ -4,7 +4,7 @@ namespace lab01_tom
 {
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
             NameQuestion();
             Total();
@@ -37,9 +37,13 @@ namespace lab01_tom
                 Console.WriteLine("Yes it is. D.Va is the best!");
                 counter++;
             }
-            else
+            else if (game == "no" || game == "n")
             {
                 Console.WriteLine("Wrong, it is!");
+            }
+            else
+            {
+                Console.WriteLine("Please answer yes or no");
             }
             return counter;
         }
@@ -47,7 +51,7 @@ namespace lab01_tom
         static int Question2()
         {
             Console.WriteLine("Out of the following, who is my favorite member of the Justice League?");
-            string[] heroesArray = new string[] { "Batman", "Superman", "Wonder Woman", "The Flash"};
+            string[] heroesArray = new string[] { "Batman", "Superman", "Wonder Woman", "The Flash" };
             int counter = 0;
 
             foreach (string heroes in heroesArray)
@@ -57,14 +61,30 @@ namespace lab01_tom
 
             string hero = Console.ReadLine().ToLower();
 
-            if (hero == "batman")
+            ////////////////////////////////////////////////CLASS 02 LAB////////////////////////////////////////////////////////////////
+            try
             {
-                Console.WriteLine("That's right!");
-                counter++;
+                if (hero == "batman")
+                {
+                    Console.WriteLine("That's right!");
+                    counter++;
+                }
+                else if (hero != "batman" && hero != "superman" && hero != "wonder woman" && hero != "the flash")
+                {
+                    throw new Exception();
+                }
+
             }
-            else
+            catch (Exception e)
             {
-                Console.WriteLine("Wrong, it's Batman!");
+                Console.WriteLine("That...that wasn't even an option", e);
+            }
+            finally
+            {
+                if (hero != "batman")
+                {
+                    Console.WriteLine("My favorite is Batman!");
+                }
             }
             return counter;
         }
@@ -79,9 +99,13 @@ namespace lab01_tom
                 Console.WriteLine("Correct. I actually drive a Volkswagen.");
                 counter++;
             }
-            else
+            else if (car == "yes" || car == "y")
             {
                 Console.WriteLine("No, I don't, but Jeeps are cool!");
+            }
+            else
+            {
+                Console.WriteLine("Please answer yes or no");
             }
             return counter;
         }
@@ -96,9 +120,13 @@ namespace lab01_tom
                 Console.WriteLine("Yep, I have a younger sister.");
                 counter++;
             }
-            else
+            else if (sister == "no" || sister == "n")
             {
                 Console.WriteLine("I do! I have a younger sister.");
+            }
+            else
+            {
+                Console.WriteLine("Please answer yes or no");
             }
             return counter;
         }
@@ -109,4 +137,4 @@ namespace lab01_tom
             Console.WriteLine($"Thanks for playing!. You got {numberCorrect} questions correct!");
         }
     }
-}   
+}
