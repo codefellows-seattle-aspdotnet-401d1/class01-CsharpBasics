@@ -38,15 +38,16 @@ namespace about_me_quiz
 
             int firstTry = 0;
 
-            for(int i = 0; i < questions.Length; i++)
+            for (int i = 0; i < questions.Length; i++)
             {
-                for(int j = 0; j < 3; j++)
+                for (int j = 0; j < 3; j++)
                 {
                     Console.WriteLine(questions[i]);
-                    string response = Console.ReadLine().ToUpper();
+                    string response = Console.ReadLine();
+                    response = response.ToUpper();
                     if (response == answers[i])
                     {
-                        if(j == 0)
+                        if (j == 0)
                         {
                             firstTry++;
                         }
@@ -59,7 +60,8 @@ namespace about_me_quiz
                         {
                             Console.WriteLine("Dang! You're out of guesses.");
                         }
-                        else {
+                        else
+                        {
                             Console.WriteLine("Nope.  Heres a hint:");
                             Console.WriteLine(PrintHint(i));
                         }
@@ -68,8 +70,76 @@ namespace about_me_quiz
 
             }
             Console.WriteLine($"You got {firstTry} correct on your first try!");
-            Console.WriteLine("Thanks for playing! Buh Bye!");
-            Console.Read();
+            Console.WriteLine("OH SNAP! BONUS ROUND! Play? Y/N");
+            string bonus = Console.ReadLine().ToUpper();
+            if (bonus == "Y")
+            {
+                BonusRound(3);
+            }
+            else
+            {
+                Console.WriteLine("Thanks for playing! Buh Bye!");
+                Console.Read();
+            }
+        }
+        static void numberloop(int randNum, int trys)
+        {
+            int roll = randNum;
+            Console.WriteLine($"Guess a number between 1 and 10. You have {trys} guesses.");
+            int guess = Convert.ToInt32(Console.ReadLine());
+            if (guess < roll)
+            {
+                Console.WriteLine("To low.");
+            }
+            else if (guess > roll)
+            {
+                Console.WriteLine("To high.");
+            }
+            else
+            {
+                Console.WriteLine("Way to go! Your skills are mad!");
+                return;
+            }
+
+        }
+        static void BonusRound(int trys)
+        {
+            Console.WriteLine("Welcome to the bonus round.");
+            Random rand = new Random();
+            int roll = rand.Next(0, 11);
+            try
+            {
+                for (int i = trys; i > 0; i--)
+                {
+                    trys = i;
+                    numberloop(roll, i);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"{e.GetType()}:Please enter a valid number. Press any key to continue.");
+                Console.ReadLine();
+                try
+                {
+                    for (int i = trys; i > 0; i--)
+                    {
+                        trys = i;
+                        numberloop(roll, i);
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("You entered something other than a number AGAIN! The program will now crash, hope you're happy.");
+                    Console.WriteLine("Please press any key to crash the program...ya jerk.");
+                    Console.Read();
+                    throw new Exception("User cannot follow simple directions.");
+                }
+            }
+            finally
+            {
+                Console.WriteLine("Thanks for playing.  Press any key to exit.");
+                Console.Read();
+            }
         }
     }
 }
