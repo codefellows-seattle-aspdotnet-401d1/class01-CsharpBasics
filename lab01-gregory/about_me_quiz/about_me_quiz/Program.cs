@@ -140,13 +140,26 @@ namespace ConsoleApp1
             {
                 Console.WriteLine("Eww, gross.  That is NOT what I want on my pie.");
                 Console.Read();
+
             }
 
         }
         static void EndOfGame()
         {
+
             Console.WriteLine($"Game Over. Thanks for playing!");
+            Console.WriteLine("Would you like to play agian?");
+            string doesntMatter = Console.ReadLine();
+            Console.WriteLine($"User Response: '{doesntMatter}' is invalid.");
+            Console.WriteLine("The system will now exit.");
             Console.Read();
+        if (doesntMatter == null)
+            {
+                throw new System.ArgumentException("The system will now exit.");
+
+            }
+
+
         }
 
 
