@@ -13,9 +13,12 @@ namespace lab01_ken
             Console.WriteLine("Here's Question number 2");
             Console.Read();
             Question2();
-            Console.WriteLine("Here's your last question");
+            Console.WriteLine("Here's your next question");
             Console.Read();
             Question3();
+            Console.WriteLine("Here's your last question");
+            Console.Read();
+            Question4();
         }
 
         static void Question1()
@@ -71,6 +74,45 @@ namespace lab01_ken
                 Console.WriteLine("Incorrect. I went to Germany, Israel, Palestine, and Romania");
                 Console.Read();
             }
+        }
+        static int Question4()
+        {
+            try
+            {
+                Console.WriteLine("How old is Kenneth?");
+                Console.Read();
+                string myage = Console.ReadLine();
+                int age = Convert.ToInt32(myage);
+                Console.WriteLine($"You guessed {age}");
+               
+                if(age == 38)
+                {
+                    Console.WriteLine("That's correct! Press Enter to exit the game.");
+                    Console.Read();
+                }
+                else
+                {
+                    Console.WriteLine("Wrong, I'm 38. Press Enter to exit the game." );
+                    Console.Read();
+                }
+                //because you declare an int in the method, you have to return an int in the code block
+                return age;
+            }catch(FormatException fe)
+            {
+                Console.WriteLine("You didn't input a number.");
+                Console.Read();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            finally
+            {
+                Console.WriteLine("Ok, this is the finally block");
+            }
+            return 0;
+
+            
         }
     }
 }
