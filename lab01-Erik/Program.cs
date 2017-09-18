@@ -8,26 +8,19 @@ namespace lab01_Erik
         static void Main(string[] args)
         {
             Console.WriteLine("This is Eriks about me quiz");
+            Greetings();
             int questionsRight = 0;
             questionsRight += VideoGames();
-            bool car = true;
-            while (car)
-            {
-                MyCar();
-                if (MyCar() == 1)
-                {
-                    car = false;
-                }
-            }
+            questionsRight += MyCar(); 
             Console.WriteLine($"you got {questionsRight}/2 right");
             Console.Read();
-        }       
+        }    
         static int VideoGames()
         {
             Console.WriteLine("Does Erik Like VideoGames?.. (yes or no)");
-            String userAnswer = Console.ReadLine();
+            String userAnswer = Console.ReadLine().ToUpper();
            
-            if (userAnswer == "YES" || userAnswer == "yes")
+            if (userAnswer == "YES" || userAnswer == "Y")
             {
                
                 Console.WriteLine("good work you got it right!..");
@@ -35,7 +28,7 @@ namespace lab01_Erik
             }
             else
             {
-                Console.WriteLine("Nope Sorry wrong");
+                Console.WriteLine("Nope wrong");
                 return 0;
             }
         
@@ -43,24 +36,69 @@ namespace lab01_Erik
         static int MyCar()
         {
             string[] carName = new string[3] { "NISSAN", "TOYOTA", "FORD"};
-            Console.WriteLine("What company made Erik's car?");
+            Console.WriteLine("name a car manufacturer that erik has used.");
             string userAnswer = Console.ReadLine().ToUpper();
             int answer = 0;
-            foreach (string make in carName)
-            {
-                if(userAnswer == make)
+            bool alarm = false;
+
+            try
+            { 
+                if (userAnswer == "\t" || userAnswer == null || userAnswer == " ")
                 {
-                    Console.WriteLine("nice work that is correct");
-                    answer = 1; 
+                    alarm = true; 
+                    throw new Exception("ERROR: Wrong INPUT!!");
                 }
                 else
                 {
-                    Console.WriteLine("sorry try again");
-                    answer = 0; 
+                    foreach (string make in carName)
+                    {
+                        if(userAnswer == make)
+                        {
+                        Console.WriteLine("nice work that is correct");
+                        answer += 1; 
+                        }
+                        else
+                        {
+                        answer += 0; 
+                        }
+                    }
+                    if (answer == 0)
+                    {
+                        Console.WriteLine("Sorry that was incorect!..");
+                    }
+
                 }
             }
+            catch(Exception e)
+            {
+                Console.WriteLine("ERROR IMPROPER INPUT:", e);
+            }
+            finally
+            {
+                if (alarm == false)
+                {
+                    Console.WriteLine("would you like to try again? y/n..");
+                    string input = Console.ReadLine().ToLower();
+                    if (input == "y" || input == "yes")
+                    {
+                        MyCar();
+                    }
+                }
+                else
+                {
+                    Environment.Exit(0);
+                }
+            }
+
             return answer; 
         }
+        static void Greetings()
+        {
+            Console.WriteLine("What is your name?");
+            string userName = Console.ReadLine();
+            Console.WriteLine($"Hello {userName}");
+        }
+        
    
     }
 }

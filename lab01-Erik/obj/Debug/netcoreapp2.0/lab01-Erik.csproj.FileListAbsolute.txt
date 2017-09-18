@@ -20,3 +20,14 @@ C:\Users\shop2\codefellows\401\class01-Erik\lab01-Erik\obj\Debug\netcoreapp2.0\l
 C:\Users\shop2\codefellows\401\class01-Erik\lab01-Erik\obj\Debug\netcoreapp2.0\lab01-Erik.AssemblyInfo.cs
 C:\Users\shop2\codefellows\401\class01-Erik\lab01-Erik\obj\Debug\netcoreapp2.0\lab01-Erik.dll
 C:\Users\shop2\codefellows\401\class01-Erik\lab01-Erik\obj\Debug\netcoreapp2.0\lab01-Erik.pdb
+C:\Users\shop2\Source\Repos\class01-Erik\lab01-Erik\bin\Debug\netcoreapp2.0\lab01-Erik.deps.json
+C:\Users\shop2\Source\Repos\class01-Erik\lab01-Erik\bin\Debug\netcoreapp2.0\lab01-Erik.runtimeconfig.json
+C:\Users\shop2\Source\Repos\class01-Erik\lab01-Erik\bin\Debug\netcoreapp2.0\lab01-Erik.runtimeconfig.dev.json
+C:\Users\shop2\Source\Repos\class01-Erik\lab01-Erik\bin\Debug\netcoreapp2.0\lab01-Erik.dll
+C:\Users\shop2\Source\Repos\class01-Erik\lab01-Erik\bin\Debug\netcoreapp2.0\lab01-Erik.pdb
+C:\Users\shop2\Source\Repos\class01-Erik\lab01-Erik\obj\Debug\netcoreapp2.0\lab01-Erik.csprojResolveAssemblyReference.cache
+C:\Users\shop2\Source\Repos\class01-Erik\lab01-Erik\obj\Debug\netcoreapp2.0\lab01-Erik.csproj.CoreCompileInputs.cache
+C:\Users\shop2\Source\Repos\class01-Erik\lab01-Erik\obj\Debug\netcoreapp2.0\lab01-Erik.AssemblyInfoInputs.cache
+C:\Users\shop2\Source\Repos\class01-Erik\lab01-Erik\obj\Debug\netcoreapp2.0\lab01-Erik.AssemblyInfo.cs
+C:\Users\shop2\Source\Repos\class01-Erik\lab01-Erik\obj\Debug\netcoreapp2.0\lab01-Erik.dll
+C:\Users\shop2\Source\Repos\class01-Erik\lab01-Erik\obj\Debug\netcoreapp2.0\lab01-Erik.pdb
