@@ -8,7 +8,7 @@ namespace lab01_Erik
         static void Main(string[] args)
         {
             Console.WriteLine("This is Eriks about me quiz");
-            Greeting();
+            Greetings();
             int questionsRight = 0;
             questionsRight += VideoGames();
             questionsRight += MyCar(); 
@@ -39,14 +39,14 @@ namespace lab01_Erik
             Console.WriteLine("name a car manufacturer that erik has used.");
             string userAnswer = Console.ReadLine().ToUpper();
             int answer = 0;
-            bool alarm = true;
+            bool alarm = false;
 
             try
             { 
                 if (userAnswer == "\t" || userAnswer == null || userAnswer == " ")
                 {
-                    alarm = false; 
-                    throw new Exception();
+                    alarm = true; 
+                    throw new Exception("ERROR: Wrong INPUT!!");
                 }
                 else
                 {
@@ -75,7 +75,7 @@ namespace lab01_Erik
             }
             finally
             {
-                if(alarm == false)
+                if (alarm == false)
                 {
                     Console.WriteLine("would you like to try again? y/n..");
                     string input = Console.ReadLine().ToLower();
@@ -86,13 +86,13 @@ namespace lab01_Erik
                 }
                 else
                 {
-                    Environment.Exit(0); 
+                    Environment.Exit(0);
                 }
             }
-            
+
             return answer; 
         }
-        static void Greeting()
+        static void Greetings()
         {
             Console.WriteLine("What is your name?");
             string userName = Console.ReadLine();
